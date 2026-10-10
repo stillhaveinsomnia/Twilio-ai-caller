@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Залиште контактні дані, і служба підтримки зв'яжеться з вами.">
+    <title>Зв'язатися з підтримкою</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="card">
+      <p class="eyebrow">Служба підтримки</p>
+      <h1>Замовити дзвінок</h1>
+      <p class="intro">Залиште ім'я та номер телефону. Оператор перевірить заявку і за потреби запустить дзвінок.</p>
+
+      <form id="lead-form">
+        <label for="firstName">Ім'я</label>
+        <input id="firstName" name="firstName" autocomplete="given-name" maxlength="80" required>
+
+        <label for="lastName">Прізвище</label>
+        <input id="lastName" name="lastName" autocomplete="family-name" maxlength="80" required>
+
+        <label for="phone">Телефон (США або Канада)</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+1 415 555 0132" required>
+
+        <p class="notice">Якщо оператор вирішить зателефонувати, відповість автоматичний ШІ-асистент; мову може обробляти служба телефонії та ШІ.</p>
+
+        <label class="consent-row">
+          <input type="checkbox" name="consent" required>
+          <span>Я даю згоду на обробку моїх персональних даних для зворотного зв'язку та оформлення заявки. Також підтверджую, що ознайомлений(а) із тим, що дані будуть використовуватися лише для обробки звернення та контакту з оператором.</span>
+        </label>
+
+        <button type="submit">Надіслати заявку</button>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </form>
+    </main>
+  </body>
+</html>
